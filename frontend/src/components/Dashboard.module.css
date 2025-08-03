@@ -1,0 +1,123 @@
+.dashboardLayout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.mainContent {
+  flex-grow: 1; /* Allows this column to take up available space */
+}
+
+/* --- Styles for the Dashboard cards --- */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.statCard {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.statCard h3 {
+  margin-top: 0;
+  font-size: 1rem;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.statValue {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #007bff;
+  word-wrap: break-word;
+}
+
+.referralCode {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #e9ecef;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  color: #495057;
+  font-size: 1.25rem;
+}
+
+/* --- Styles for the Sidebar Leaderboard --- */
+.sidebarLeaderboard {
+  flex-basis: 320px; /* Sets the initial width of the sidebar */
+  flex-shrink: 0; /* Prevents the sidebar from shrinking */
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.sidebarLeaderboard h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.leaderboardList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.leaderboardItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.leaderboardItem:last-child {
+  border-bottom: none;
+}
+
+.currentUserHighlight {
+  background-color: #e7f1ff;
+  border-radius: 4px;
+}
+
+/* --- User switcher styles (mostly unchanged) --- */
+.userSwitcher {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.userSwitcher h4 {
+  margin: 0 1rem 0 0;
+}
+
+.userSwitcher button {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  background-color: #f8f9fa;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.userSwitcher button:hover {
+  background-color: #e9ecef;
+}
+
+.activeButton {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
